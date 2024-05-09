@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Mobile Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jquery mobile src link -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script>
+        $(document).on("pagecreate", "#home", function () {
+            $("p").on("vmouseover", function () {
+                $(this).hide();
+            });
+
+        });
+
+        $(document).on("pagecreate", function () {
+            $("#submitBtn").on("click", function () {
+                var name = $("#name").val();
+                alert("Hello, " + name + "! Your registration is successful.");
+            });
+
+            $(document).on("pagebeforeshow", "#dialogPage", function () {
+                $("#myPopup").popup("open");
+            });
+
+            $(document).on("pagehide", "#dialogPage", function () {
+                $("#myPopup").popup("close");
+            });
+        });
+    </script>
+    </head>
+<body><!---------------------------------------------------------------------- page 1-------------------------------------------------->
+<div data-role="page" data-theme="b" class="container" id="home" data-title="First Page">
+    <div data-role="header" data-position="fixed">
+        <h1>page 1</h1>
+    </div>
+
+    <div data-role="navbar" class="ui-body-b ui-body">
+        <ul>
+
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+
+
+        </ul>
+    </div>
+
+    <div data-role="content" id="disappear">
+
+        <div data-role="main" class="ui-content">
+            <h1>Alaybee event managers</h1>
+            <p>Days are full of details, but the right details are what matter for special moments.<br> For the 15 years
+                we have been lucky enough to plan alongside our awesome clients in the Pune.... </p>
+
+        </div>
+        <img class="popphoto" src="https://asknyra.com/wp-content/uploads/2021/01/event-management-service-1.jpg"
+            alt="jQuery" style="width: 100%; height: 50%;">
+    </div>
+    <div data-role="footer">
+
+        <div data-role="footer" data-theme="b">
+            <center>
+                <div class="quicklink">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a><br><br>
+                    <a href="#about">About us</a><br><br>
+                    <a href="#contact">Contact</a><br><br>
+
+                </div>
+                <p>Copyright 2024 | </p>
+            </center>
+        </div>
+
+    </div>
+</div>
+
+<!------------------------------------------------------------ page 2 ------------------------------------------------->
+<div data-role="page" data-theme="b" class="container" id="about" data-title="Second Page">
+    <div data-role="header" data-position="fixed">
+        <h1>page 2</h1>
+    </div>
+
+    <div data-role="navbar" class="ui-body-b ui-body">
+        <ul>
+
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About US</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div style="text-align: center;">
+        <h1>No event is alike..</h1>
+    </div>
+    <div data-role="content">
+        <a href="#p1" data-role="button" data-inline="true">Open panel</a>
+    </div>
+    <div data-role="panel" id="p1" data-position="left" data-display="overlay" data-disissible="true" data-theme="b">
+        <div class="panel-content">
+            <h2>Quick links</h2>
+            <p>Do visit:</p>
+            <ul>
+
+                <li><a href="https://g.co/kgs/jY7SXZZ">Hall</a></li>
+                <li><a href="https://maps.app.goo.gl/TUatqRCnRnboH8K2A">Lawns</a></li>
+                <li><a href="https://g.co/kgs/jY7SXZZ">Hall</a></li>
+
+            </ul>
+
+            <a href="" data-rel="close" data-role="button" data-inline="true">close this panel</a>
+        </div>
+    </div>
+
+    <div class="ui-grid-c" style="margin-left: 200px;">
+
+            <div class="ui-block-a">
+            <div class="ui-bar ui-bar-a" style="height:200px;">
+                <img class="popphoto" src="https://cdn0.weddingwire.in/vendor/6794/3_2/960/jpg/5_15_76794.jpeg"
+                    alt="jQuery" style="width: 100%;">
+            </div>
+        </div>
+            <div class="ui-block-b">
+            <div class="ui-bar ui-bar-a" style="height:200px">
+
+                1.Set your Budget. <br>
+                2. Decide what's important to you. <br>
+                3. Ideas, styles and themes. <br>
+                4. Find a venue. <br>
+                5. Send out your invites. <br>
+                6. Hiring a Photographer and other suppliers.</p>
+            </div>
+        </div>
+
+            <div class="ui-block-c">
+            <div class="ui-bar ui-bar-a" style="height:200px">
+                <img class="popphoto"
+                    src="https://homafy.com/wp-content/uploads/2023/01/baby-shower-party-welcome-board-2.jpeg"
+                    alt="jQuery" style="width: 100%; height: 100%;">
+            </div>
+        </div>
+           
+        <br><br>
+           <div class="ui-block-a">
+            <div class="ui-bar ui-bar-a" style="height:200px">
+                <img class="popphoto"
+                    src="https://celebrationmanagement.com/super_admin/uploads/package/2016096612022-05-15.webp"
+                    alt="jQuery" style="width: 100%; height: 100%;">
+            </div>
+        </div>
+            <div class="ui-block-b">
+            <div class="ui-bar ui-bar-a" style="height:200px">
+                <p>Wedding Planning Checklist <br>
+                    1.Set your Budget. <br>
+                    2. Decide what's important to you. <br>
+                    3. Ideas, styles and themes. <br>
+                    4. Find a venue. <br>
+                    5. Send out your invites. <br>
+                    6. Hiring a Photographer and other suppliers.</p>
+            </div>
+        </div>
+
+            <div class="ui-block-c">
+            <div class="ui-bar ui-bar-a" style="height:200px">
+                <img class="popphoto"
+                    src="https://cdn0.weddingwire.in/article/5008/3_2/1280/jpg/48005-reception-ideas-lumeireweddingcompany-lead.webp"
+                    alt="jQuery" style="width: 100%; height: 100%;">
+            </div>
+        </div>
+           
+
+    </div><!-- /grid-c -->
+
+
+    <p>Click the buttons below:</p>
+    <a href="#page2" data-role="button" data-transition="slide" style="height: fit-content; width: fit-content;">Go to
+        Registration</a>
+
+    <div data-role="footer" data-position="fixed">
+        <h4>Footer Text</h4>
+    </div>
+
+</div>
+</div>
+
+
+<!-- Page 2 -->
+<div data-role="page" id="page2" data-theme="b">
+
+
+    <div data-role="header" data-position="fixed">
+        <h1>Page 2</h1>
+    </div>
+
+    <div data-role="content">
+        <h2>Event Registration</h2>
+        <label for="name">Enter Your Name:</label>
+        <input type="text" id="name" placeholder="Your Name">
+        <label for="email">Enter Your Email:</label>
+        <input type="email" id="email" placeholder="Your Email">
+        <label for="city">Enter City:</label>
+        <input type="text" id="city" placeholder="city">
+        <label for="members">No. of guests</label>
+        <input type="text" id="guests" placeholder="No. of guests">
+        <label for=""> Address:</label>
+        <textarea name="" id="" cols="25" rows="7" placeholder="Address"></textarea>
+        <label for=""> Date of event:</label>
+        <input type="date"> <br>
+
+        <button id="submitBtn" data-role="button" data-inline="true">Submit</button>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h4>Footer Text</h4>
+    </div>
+</div>
+
+<div data-role="footer" data-position="fixed">
+    <h4>Footer Text</h4>
+</div>
+</div>
+<!---------------------------------------------------  page 3  -------------------------------------------------->
+<div data-role="page" data-theme="b" class="container" id="contact" data-title="Third Page">
+
+
+    <div data-role="header" data-position="fixed">
+        <h4>page 3</h4>
+    </div>
+    <div data-role="navbar" class="ui-body-b ui-body">
+        <ul>
+
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About US</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </div>
+    <div data-role="content">
+        <div style="text-align: center;">
+            <h1>Contact Us</h1>
+        </div>
+        <div style="text-align: center;">
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60542.382025198254!2d73.81319699967139!3d18.488239176523113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c00d21589705%3A0x44b30249bb1ea849!2sSports%20World!5e0!3m2!1sen!2sin!4v1705389215125!5m2!1sen!2sin"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="text-align: center;">
+            <h3>Phone:</h3>
+            <p>+123-456-7890</p>
+            <h3>Email:</h3>
+            <p>hello@reallygreatsite.com</p>
+            <h3>Address:</h3>
+            <p>123Anywhere St., Any City</p>
+
+        </div>
+    </div>
+
+</div>
+</body>
+
+</html>
